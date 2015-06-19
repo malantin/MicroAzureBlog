@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Microblog with Azure Mobile Services</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+  </head>
+  
+  <body ng-app="microAzureBlog">
+	  
+	<div class="container body-content">
+		<div class="jumbotron">
+    		<h1>A simple blog with Azure Mobile Services</h1>
+		</div>
+		<div class="row">
+	  		<div class="col-xs-12 col-sm-6 col-md-8" ng-controller="blogpostController">
+				  <article ng-repeat="post in model.posts">
+					  <h1 ng-bind="post.title">
+						
+					  </h1>
+					  <p ng-bind="post.text">
+						
+						</p>
+				  </article>
+			</div>
+	  		<div class="col-xs-6 col-md-4">
+			<aside>
+				This is a simple example on how to access data on Azure Mobile Services with AngularJS.
+			</aside>	  
+			</div>
+		</div>
+		<footer>
+			For more information on Microsoft Azure visit <a href="http://azure.microsoft.com">http://azure.microsoft.com</a>.
+		</footer>
+	</div>
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+	
+	<script src="js/angular.js"></script>
+	
+	<script src="app/controllers/blogpostController.js"></script>
+	
+  </body>
+</html>
